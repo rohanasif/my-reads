@@ -5,30 +5,11 @@ import { Shelf } from "./Shelf";
 import { get, getAll, update, search } from "./BooksAPI";
 
 
-
-
 function App() {
   const [showSearchPage, setShowSearchpage] = useState(false);
 
-  const [currentlyReading, setCurrentlyReading] = useState(false);
-  const [wantToRead, setWantToRead] = useState(false);
-  const [read, setRead] = useState(false);
-  const [none, setNone] = useState(true);
+  const [shelf, setShelf] = useState('none')
 
-  const handleChange = () => {
-    if (currentlyReading) {
-      setCurrentlyReading = true;
-    }
-    else if (wantToRead) {
-      setWantToRead = true;
-    }
-    else if (read) {
-      setRead = true;
-    }
-    else if (none) {
-      setNone = true;
-    }
-  }
 
   return (
     <div className="app">

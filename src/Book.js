@@ -1,4 +1,18 @@
-export function Book({ id, img, title, author }) {
+export function Book({ img, title, author, shelf }) {
+    const handleChange = (e) => {
+        if (e.target.value === "currentlyReading") {
+            shelf = "currentlyReading"
+        }
+        else if (e.target.value === "wantToRead") {
+            shelf = "wantToRead"
+        }
+        else if (e.target.value === "read") {
+            shelf = "read"
+        }
+        else {
+            shelf = "none"
+        }
+    }
     return (
         <div className="book">
             <div className="book-top">
@@ -12,7 +26,7 @@ export function Book({ id, img, title, author }) {
                     }}
                 ></div>
                 <div className="book-shelf-changer">
-                    <select>
+                    <select defaultValue={'none'} onChange={handleChange}>
                         <option value="none" disabled>
                             Move to...
                         </option>
@@ -21,7 +35,7 @@ export function Book({ id, img, title, author }) {
                         </option>
                         <option value="wantToRead">Want to Read</option>
                         <option value="read">Read</option>
-                        <option value="none" selected>None</option>
+                        <option value="none">None</option>
                     </select>
                 </div>
             </div>
