@@ -1,6 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
-import { Book } from "./Book";
+import { useState } from "react";
 import { Shelf } from "./Shelf";
 
 
@@ -8,9 +7,6 @@ import { Shelf } from "./Shelf";
 
 function App() {
   const [showSearchPage, setShowSearchpage] = useState(false);
-
-
-
 
   return (
     <div className="app">

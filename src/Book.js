@@ -1,9 +1,9 @@
-export function Book({ img, title, author, shelf }) {
+export function Book(book) {
     const handleChange = (e) => {
-        if (e.target.value === "currentlyReading") shelf = "currentlyReading"
-        else if (e.target.value === "wantToRead") shelf = "wantToRead"
-        else if (e.target.value === "read") shelf = "read"
-        else shelf = "none"
+        if (e.target.value === "currentlyReading") book.shelf = "currentlyReading"
+        else if (e.target.value === "wantToRead") book.shelf = "wantToRead"
+        else if (e.target.value === "read") book.shelf = "read"
+        else book.shelf = "none"
     }
     return (
         <div className="book">
@@ -14,7 +14,7 @@ export function Book({ img, title, author, shelf }) {
                         width: 128,
                         height: 193,
                         backgroundImage:
-                            `${img}`,
+                            `${book.imageLinks}`,
                     }}
                 ></div>
                 <div className="book-shelf-changer">
@@ -31,8 +31,8 @@ export function Book({ img, title, author, shelf }) {
                     </select>
                 </div>
             </div>
-            <div className="book-title">{title}</div>
-            <div className="book-authors">{author}</div>
+            <div className="book-title">{book.title}</div>
+            <div className="book-authors">{book.authors}</div>
         </div>
     )
 }
