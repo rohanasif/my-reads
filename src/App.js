@@ -38,9 +38,9 @@ function App() {
           <div className="list-books-content">
             <div>
 
-              <Shelf shelfTitle={"Currently Reading"}></Shelf>
-              <Shelf shelfTitle={"Want to Read"}></Shelf>
-              <Shelf shelfTitle={"Read"}></Shelf>
+              <Shelf shelfProperty={"currentlyReading"} shelfTitle={"Currently Reading"}></Shelf>
+              <Shelf shelfProperty={"wantToRead"} shelfTitle={"Want to Read"}></Shelf>
+              <Shelf shelfProperty={"read"} shelfTitle={"Read"}></Shelf>
 
             </div>
           </div>

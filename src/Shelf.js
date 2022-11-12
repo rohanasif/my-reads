@@ -22,7 +22,7 @@ export function Shelf({ shelfTitle }) {
                 <ol className="books-grid">
                     {
                         books
-                            .filter((book) => book.shelf === shelfTitle)
+                            .filter((book) => book.shelf === shelfProperty)
                             .map((book, id) => <li key={id}><Book book={book} /></li>)
                     }
                 </ol>
