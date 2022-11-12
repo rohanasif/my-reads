@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Book } from "./Book"
 import * as BooksAPI from "./BooksAPI";
 
-export function Shelf({ shelfTitle }) {
+export function Shelf({ shelfTitle, shelfProperty }) {
 
     const [books, setBooks] = useState([])
 
