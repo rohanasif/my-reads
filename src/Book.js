@@ -1,17 +1,9 @@
 export function Book({ img, title, author, shelf }) {
     const handleChange = (e) => {
-        if (e.target.value === "currentlyReading") {
-            shelf = "currentlyReading"
-        }
-        else if (e.target.value === "wantToRead") {
-            shelf = "wantToRead"
-        }
-        else if (e.target.value === "read") {
-            shelf = "read"
-        }
-        else {
-            shelf = "none"
-        }
+        if (e.target.value === "currentlyReading") shelf = "currentlyReading"
+        else if (e.target.value === "wantToRead") shelf = "wantToRead"
+        else if (e.target.value === "read") shelf = "read"
+        else shelf = "none"
     }
     return (
         <div className="book">
