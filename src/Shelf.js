@@ -15,8 +15,8 @@ export function Shelf({ shelfTitle }) {
             <h2 className="bookshelf-title">{shelfTitle}</h2>
             <div className="bookshelf-books">
                 <ol className="books-grid">
-                    {books.forEach(book => {
-                        <li><Book book={book} /></li>
+                    {books.map(book => {
+                        <li><Book /></li>
                     })}
                 </ol>
             </div>
