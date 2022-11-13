@@ -3,7 +3,7 @@ export function Book(book) {
         if (e.target.value === "currentlyReading") book.book.shelf = "currentlyReading"
         else if (e.target.value === "wantToRead") book.book.shelf = "wantToRead"
         else if (e.target.value === "read") book.book.shelf = "read"
-        else book.shelf = "none"
+        else book.book.shelf = "none"
     }
     return (
         <div className="book">
